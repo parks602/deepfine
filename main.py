@@ -9,6 +9,7 @@ from board import board_router
 app = FastAPI()
 
 app.include_router(board_router.app, tags=["board"])
+
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
