@@ -8,7 +8,7 @@ from board import board_router
 
 app = FastAPI()
 
-app.include_router(board_router.app, tags=["board"])
+app.include_router(board_router.router, tags=["board"])
 
 @app.get("/")
 async def root():
